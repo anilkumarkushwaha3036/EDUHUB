@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduHub - Your CS Study Companion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="aittools.css">
+    <link rel="stylesheet" href="docs.css">
+    <link rel="stylesheet" href="domain.css">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="#" class="logo">EDUHUB</a>
+            </div>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#" data-category="home" class="nav-link">Home</a></li>
+                    <li><a href="#" data-category="documentation" class="nav-link">Documentation</a></li>
+                    <li><a href="#" data-category="cs_domain" class="nav-link">CS Domain</a></li>
+                    <li><a href="#" data-category="blog" class="nav-link">Blog</a></li>
+                    <li><a href="#" data-category="tools" class="nav-link">AI Tools</a></li>
+</ul>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search topics or tools...">
+                </div>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="home-page" class="home-page">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Welcome to EduHub</h1>
+                    <p>Your complete learning hub for Computer Science. Master new skills with curated content, latest trends, and expert resources.</p>
+                    <div class="search-container-hero">
+                        <input type="text" id="searchInputHero" placeholder="Search courses, blogs, tools...">
+                        <button class="search-btn">
+                            <span>🔍</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featured-categories">
+                <h2>Featured Categories</h2>
+                <div class="category-grid">
+                    <div class="category-card" data-category="cs_domain">
+                        <div class="category-icon">🔬</div>
+                        <h3>CS Domains</h3>
+                        <p>Explore specialized fields in Computer Science with curated video tutorials.</p>
+                        <span class="card-badge">15+ Topics</span>
+                    </div>
+                    <div class="category-card" data-category="blog">
+                        <div class="category-icon">📝</div>
+                        <h3>Tech Blog</h3>
+                        <p>Read latest articles on technology trends and industry insights.</p>
+                        <span class="card-badge">10+ Articles</span>
+                    </div>
+                    <div class="category-card" data-category="tools">
+                        <div class="category-icon">🤖</div>
+                        <h3>AI Tools</h3>
+                        <p>Discover the latest AI tools and technologies for developers.</p>
+                        <span class="card-badge">Trending Now</span>
+                    </div>
+                    
+                    <div class="category-card" data-category="documentation">
+                        <div class="category-icon">📚</div>
+                        <h3>Documentation</h3>
+                        <p>Access official documentation for all programming languages.</p>
+                        <span class="card-badge">15 Languages</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quick-stats">
+                <div class="stat-item">
+                    <h4>100+</h4>
+                    <p>Learning Resources</p>
+                </div>
+                <div class="stat-item">
+                    <h4>15</h4>
+                    <p>Programming Languages</p>
+                </div>
+                <div class="stat-item">
+                    <h4>25+</h4>
+                    <p>Tech Topics</p>
+                </div>
+                <div class="stat-item">
+                    <h4>10+</h4>
+                    <p>Articles & Blogs</p>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h2>Start Your Learning Journey</h2>
+                <p>Choose what you want to learn and dive into comprehensive tutorials, articles, and resources.</p>
+                <div class="cta-buttons">
+                    <button class="cta-btn primary" data-category="cs_domain">Explore Domains</button>
+                    <button class="cta-btn secondary" data-category="blog">Read Articles</button>
+                </div>
+            </div>
+        </div>
+        <!-- Documentation Section - Loaded from docs.html -->
+        <div id="documentation-page" class="documentation-page" style="display: none;">
+            
+            <div class="language-tabs-wrapper">
+                <button class="scroll-button scroll-left" id="scrollLeft" style="display: none;">
+                    <span>&#10094;</span>
+                </button>
+                <div class="language-tabs" id="languageTabsContainer">
+                    <button class="language-tab active" data-language="html">HTML</button>
+                    <button class="language-tab" data-language="css">CSS</button>
+                    <button class="language-tab" data-language="javascript">JavaScript</button>
+                    <button class="language-tab" data-language="typescript">TypeScript</button>
+                    <button class="language-tab" data-language="php">PHP</button>
+                    <button class="language-tab" data-language="python">Python</button>
+                    <button class="language-tab" data-language="java">Java</button>
+                    <button class="language-tab" data-language="c">C</button>
+                    <button class="language-tab" data-language="cpp">C++</button>
+                    <button class="language-tab" data-language="csharp">C#</button>
+                    <button class="language-tab" data-language="kotlin">Kotlin</button>
+                    <button class="language-tab" data-language="swift">Swift</button>
+                    <button class="language-tab" data-language="go">Go</button>
+                    <button class="language-tab" data-language="rust">Rust</button>
+                    <button class="language-tab" data-language="ruby">Ruby</button>
+                </div>
+                <button class="scroll-button scroll-right" id="scrollRight" style="display: none;">
+                    <span>&#10095;</span>
+                </button>
+            </div>
+
+            <div class="docs-resources">
+                <!-- Resources will be dynamically loaded here -->
+            </div>
+        </div>
+
+        <!-- CS Domain Section -->
+        <div id="cs-domain-page" class="cs-domain-page" style="display: none;">
+            <div class="domain-tabs-wrapper">
+                <button class="scroll-button scroll-left-domain" id="scrollLeftDomain" style="display: none;">
+                    <span>&#10094;</span>
+                </button>
+                <div class="domain-tabs" id="domainTabsContainer">
+                    <!-- Tabs will be dynamically generated here -->
+                </div>
+                <button class="scroll-button scroll-right-domain" id="scrollRightDomain" style="display: none;">
+                    <span>&#10095;</span>
+                </button>
+            </div>
+
+            <div class="domain-videos-grid">
+                <!-- Video cards will be dynamically loaded here -->
+            </div>
+        </div>
+
+        <!-- Blog Section -->
+        <div id="blog-page" class="blog-page" style="display: none;">
+            <div class="blog-articles-grid">
+                <!-- Blog articles will be dynamically loaded here -->
+            </div>
+        </div>
+
+        
+
+        <div id="content-grid" class="content-grid" style="display: none;">
+            <!-- All resource cards will be dynamically inserted here by JavaScript -->
+        </div>
+    </main>
+    <script src="aittools.js"></script>
+    <script src="docs.js"></script>
+    <script src="domain.js"></script>
+    <script src="blog.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

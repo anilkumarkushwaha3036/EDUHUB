@@ -1,0 +1,268 @@
+/* CS Domain Page */
+.cs-domain-page {
+    padding: 0;
+    max-width: 100%;
+    margin: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* Domain Tabs Wrapper */
+.domain-tabs-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    position: sticky;
+    top: 70px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(240,244,255,0.95) 100%);
+    z-index: 10;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+/* Domain Tabs Container */
+.domain-tabs {
+    display: flex;
+    gap: 10px;
+    padding: 15px 20px;
+    background: transparent;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    flex: 1;
+    min-width: 0;
+    justify-content: flex-start;
+}
+
+/* Hide scrollbar for custom scrolling */
+.domain-tabs::-webkit-scrollbar {
+    height: 0;
+}
+
+.domain-tabs::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.domain-tabs::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.domain-tab {
+    padding: 10px 20px;
+    border: 2px solid rgba(102, 126, 234, 0.3);
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.domain-tab:hover {
+    border-color: #667eea;
+    color: #667eea;
+    background: #f0f4ff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.domain-tab.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.35);
+    transform: translateY(-2px);
+}
+
+/* Scroll Buttons */
+.scroll-left-domain,
+.scroll-right-domain {
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 15px 8px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 45px;
+    height: 45px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.scroll-left-domain:hover,
+.scroll-right-domain:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.scroll-left-domain:active,
+.scroll-right-domain:active {
+    transform: scale(0.95);
+}
+
+.scroll-left-domain span,
+.scroll-right-domain span {
+    line-height: 1;
+}
+
+/* Domain Videos Grid */
+.domain-videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 35px;
+    padding: 50px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.domain-video-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    position: relative;
+}
+
+.domain-video-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+}
+
+.domain-video-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 35px rgba(102, 126, 234, 0.25);
+    border-color: #667eea;
+}
+
+.domain-video-card:hover::before {
+    transform: scaleX(1);
+}
+
+.video-iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    background: #f0f0f0;
+    border-radius: 12px 12px 0 0;
+}
+
+.video-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    background: white;
+}
+
+.domain-video-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.domain-video-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.domain-video-category {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    width: fit-content;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.25);
+    letter-spacing: 0.3px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .domain-videos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 20px;
+        padding: 30px 15px;
+    }
+
+    .cs-domain-header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .domain-videos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+        padding: 20px 10px;
+    }
+
+    .domain-tab {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .cs-domain-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .cs-domain-header p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .domain-videos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cs-domain-header {
+        padding: 30px 15px;
+    }
+
+    .domain-tab {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+}
